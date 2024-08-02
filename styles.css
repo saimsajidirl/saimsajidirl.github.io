@@ -91,7 +91,6 @@ nav {
     font-size: 24px;
     transition: color 0.3s ease;
 }
-
 .hero {
     height: 100vh;
     display: flex;
@@ -99,7 +98,7 @@ nav {
     justify-content: center;
     text-align: center;
     background-color: var(--primary-color);
-    color: var(--secondary-color);
+    color: #ffffff; /* Changed to white */
     position: relative;
     overflow: hidden;
 }
@@ -130,6 +129,7 @@ nav {
     font-size: 64px;
     margin-bottom: 20px;
     animation: fadeInUp 1s ease;
+    color: #ffffff; /* Ensure h1 is white */
 }
 
 .hero-content p {
@@ -137,7 +137,9 @@ nav {
     margin-bottom: 30px;
     animation: fadeInUp 1s ease 0.5s;
     animation-fill-mode: both;
+    color: #ffffff; /* Ensure p is white */
 }
+
 
 .btn {
     display: inline-block;
