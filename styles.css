@@ -12,31 +12,10 @@
 .dark-mode {
     --primary-color: #ffffff;
     --secondary-color: #000000;
-    --text-color: #e0e0e0; /* Default text color */
+    --text-color: #ffffff;
     --bg-color: #121212;
     --card-bg: #1e1e1e;
     --card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
-}
-
-/* Example of applying black text with white outline */
-.dark-mode .text-outline {
-    color: #000000; /* Black text color */
-    text-shadow: 
-        1px 1px 2px #ffffff, 
-        -1px -1px 2px #ffffff, 
-        1px -1px 2px #ffffff, 
-        -1px 1px 2px #ffffff; /* White outline */
-}
-
-/* Additional styles for the dark mode can go here */
-.dark-mode body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.dark-mode .card {
-    background-color: var(--card-bg);
-    box-shadow: var(--card-shadow);
 }
 
 * {
@@ -351,6 +330,7 @@ nav {
         font-size: 24px;
     }
 }
+
 .projects a {
     text-decoration: none;
     color: inherit;
@@ -359,7 +339,6 @@ nav {
 .projects a:hover {
     text-decoration: none;
 }
-
 
 .footer {
     background-color: var(--bg-color);
@@ -394,7 +373,7 @@ nav {
 }
 
 .social-links a {
-    color: var(--primary-color); /* Color for links */
+    color: var(--text-color);
     text-decoration: none;
     font-size: 18px;
     font-weight: 600;
@@ -402,7 +381,7 @@ nav {
 }
 
 .social-links a:hover {
-    color: var(--secondary-color); /* Color for links on hover */
+    color: var(--primary-color);
 }
 
 .social-links img {
