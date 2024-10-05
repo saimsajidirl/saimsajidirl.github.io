@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ Section</title>
+  <style>
+   /* Custom properties for easy theming */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333333;
+    --background-color: #f4f4f4;
+    --card-background: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 5rem 2rem;
+    background-color: var(--background-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-header {
+    text-align: center;
+    font-size: 3rem; /* Smaller header */
+    margin-bottom: 3rem; /* Adjusted margin */
+    color: var(--text-color);
+}
+
+/* FAQ Items */
+.faq-item {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    margin-bottom: 1.5rem; /* Adjusted margin */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+}
+
+.faq-question {
+    padding: 1rem 1.5rem; /* Smaller padding */
+    font-size: 1.2rem; /* Smaller question text */
+    font-weight: 600;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.faq-question:hover {
+    background-color: var(--secondary-color);
+}
+
+.faq-answer {
+    padding: 1rem 1.5rem; /* Smaller padding */
+    display: none; /* Initially hidden */
+    font-size: 1rem; /* Smaller answer text */
+    color: var(--text-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Active State */
+.faq-item.active .faq-answer {
+    display: block; /* Show answer when active */
+}
+
+.faq-item.active .faq-question {
+    background-color: var(--secondary-color);
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="faq-section">
+    <h2 class="faq-header">Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">At what point did you commence your programming education?</div>
+      <div class="faq-answer">
+        <p>I attempted to learn programming as a child, using a Core 2 Duo PC. Despite running a software that was too demanding for even Python, I managed to get it working and create a basic calculator. Unfortunately, the software was very slow, so I eventually deleted it. After joining university and focusing on my studies for the first four semesters, I began learning Python. I wish I had started sooner.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What do you hope to achieve in the future?</div>
+      <div class="faq-answer">
+        <p>My goal is to pursue a career in Machine Learning and ultimately establish my own company.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is there a resource where I can find out more about you?</div>
+      <div class="faq-answer">
+        <p>Additional information about us can be found in the About Us section of our website and on our social media platforms.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I reach out to you directly for business inquiries?</div>
+      <div class="faq-answer">
+        <p>To contact me for business inquiries, please email me at "Saimsajidirl@gmail.com".</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
