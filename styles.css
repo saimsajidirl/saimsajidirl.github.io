@@ -523,7 +523,7 @@ nav ul li a:hover::after {
 }
 
 
-/* Workstyle Framework Section */
+/* W/* Workstyle Framework Section */
 .featured {
     background: var(--surface-color);
     padding: 5rem 0;
@@ -601,8 +601,9 @@ nav ul li a:hover::after {
     backdrop-filter: blur(5px);
 }
 
+/* Retain only the zoom animation */
 .anime-card:hover {
-    transform: translateY(-10px) rotate(2deg);
+    transform: translateY(-10px); /* Removed the rotate effect */
     box-shadow: 0 15px 30px rgba(var(--primary-color-rgb), 0.2);
 }
 
@@ -630,7 +631,7 @@ nav ul li a:hover::after {
 }
 
 .anime-card:hover .anime-card-image img {
-    transform: scale(1.1) rotate(-2deg);
+    transform: scale(1.1); /* Removed the rotate effect */
 }
 
 .anime-card-content {
@@ -669,12 +670,6 @@ nav ul li a:hover::after {
         flex-basis: 100%;
     }
 }
-
-
-
-
-
-
 
 
 
