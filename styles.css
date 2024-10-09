@@ -60,6 +60,7 @@ header.scrolled {
 .logo:hover {
     text-shadow: 0 0 10px var(--primary-color);
 }
+
 .logo {
     display: flex;
     align-items: center;
@@ -68,9 +69,11 @@ header.scrolled {
 }
 
 .logo img {
-    width: 50px; /* Set your logo size */
-    height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease;
+    margin-right: 15px; /* Creates a gap between the image and the text */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image scales correctly within the circle */
 }
 
 .logo:hover img,
