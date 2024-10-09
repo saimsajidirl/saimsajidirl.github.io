@@ -1,121 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ Section</title>
-  <style>
-   /* Custom properties for easy theming */
-:root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --text-color: #333333;
-    --background-color: #f4f4f4;
-    --card-background: #ffffff;
-    --transition-speed: 0.3s;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="Logo.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #6200ea; /* Purple heading */
 }
 
 /* FAQ Section */
-.faq-section {
-    padding: 5rem 2rem;
-    background-color: var(--background-color);
-    max-width: 1200px;
+.faq-container {
+    margin: 40px 0;
+    background-color: #2c2c2c; /* Slightly lighter dark background for container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.faq-section .container {
+    max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-.faq-header {
-    text-align: center;
-    font-size: 3rem; /* Smaller header */
-    margin-bottom: 3rem; /* Adjusted margin */
-    color: var(--text-color);
+.faq h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-/* FAQ Items */
-.faq-item {
-    background-color: var(--card-background);
-    border-radius: 10px;
-    margin-bottom: 1.5rem; /* Adjusted margin */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: all var(--transition-speed) ease;
+/* FAQ List Styles */
+.faq ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-.faq-question {
-    padding: 1rem 1.5rem; /* Smaller padding */
-    font-size: 1.2rem; /* Smaller question text */
-    font-weight: 600;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    transition: background-color var(--transition-speed) ease;
+/* Card Style for FAQ Items */
+.faq-card {
+    background-color: #4a4a4a; /* Dark background for cards */
+    border: 1px solid #585858; /* Slightly lighter border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
 }
 
-.faq-question:hover {
-    background-color: var(--secondary-color);
+.faq-card strong {
+    display: block;
+    font-size: 18px;
+    color: #ffffff; /* White text for questions */
+    margin-bottom: 10px;
 }
 
-.faq-answer {
-    padding: 1rem 1.5rem; /* Smaller padding */
-    display: none; /* Initially hidden */
-    font-size: 1rem; /* Smaller answer text */
-    color: var(--text-color);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+.faq-card p {
+    font-size: 16px;
+    color: #ffffff; /* White text for answers */
+    margin: 0;
 }
 
-/* Active State */
-.faq-item.active .faq-answer {
-    display: block; /* Show answer when active */
+/* Hover Effects for Cards */
+.faq-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-.faq-item.active .faq-question {
-    background-color: var(--secondary-color);
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 20px;
+    }
+
+    .faq-section .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .faq-card strong {
+        font-size: 16px;
+    }
+
+    .faq-card p {
+        font-size: 14px;
+    }
 }
 
 
-  </style>
+
+    </style>
 </head>
+
 <body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <span>Muhammad Saim</span>
+        </div>            <nav>
+            <ul>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="About.html" class="nav-link">About</a>
+                <a href="Contact.html" class="nav-link">Contact</a>
+           
 
-  <div class="faq-section">
-    <h2 class="faq-header">Frequently Asked Questions</h2>
 
-    <div class="faq-item">
-      <div class="faq-question">At what point did you commence your programming education?</div>
-      <div class="faq-answer">
-        <p>I attempted to learn programming as a child, using a Core 2 Duo PC. Despite running a software that was too demanding for even Python, I managed to get it working and create a basic calculator. Unfortunately, the software was very slow, so I eventually deleted it. After joining university and focusing on my studies for the first four semesters, I began learning Python. I wish I had started sooner.</p>
-      </div>
+            </ul>
+        </nav>
     </div>
-
-    <div class="faq-item">
-      <div class="faq-question">What do you hope to achieve in the future?</div>
-      <div class="faq-answer">
-        <p>My goal is to pursue a career in Machine Learning and ultimately establish my own company.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">Is there a resource where I can find out more about you?</div>
-      <div class="faq-answer">
-        <p>Additional information about us can be found in the About Us section of our website and on our social media platforms.</p>
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-question">How can I reach out to you directly for business inquiries?</div>
-      <div class="faq-answer">
-        <p>To contact me for business inquiries, please email me at "Saimsajidirl@gmail.com".</p>
-      </div>
-    </div>
+</header>
+<main>
+  <div class="faq-container">
+      <section id="about" class="faq-section">
+          <div class="container">
+              <div class="faq">
+                  <h2>Frequently Asked Questions</h2><br>
+                  <ul>
+                      <li class="faq-card">
+                          <strong>At what point did you commence your programming education?</strong>
+                          <p>As a child, I tried to learn programming on an Core 2 Duo computer with 3 Gb Ram. Despite using a software that was too powerful for my system, I persevered and managed to create a basic calculator. However, the performance was slow of the IDE, so I eventually uninstalled it. After starting university, I focused on my studies for the first four semesters. Then, I began learning Python. Looking back, I wish I had started earlier.</p>
+                      </li>
+                      <li class="faq-card">
+                          <strong>What do you hope to achieve in the future?</strong>
+                          <p>My goal is to pursue a career in Machine Learning and ultimately establish my own company.</p>
+                      </li>
+                      <li class="faq-card">
+                          <strong>Is there a resource where I can find out more about you?</strong>
+                          <p>Additional information about us can be found in the About Us section of my website and on our social media platforms.</p>
+                      </li>
+                      <li class="faq-card">
+                          <strong>How can I reach out to you directly for business inquiries?</strong>
+                          <p>To contact me for business inquiries, please email me at "Saimsajidirl@gmail.com".</p>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </section>
   </div>
+</main>
 
-  <script>
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const faqItem = question.parentElement;
-        faqItem.classList.toggle('active');
-      });
-    });
-  </script>
 
+     
+    
+    <footer class="footer">
+      <div class="footer-content">
+          <div class="footer-links">
+              <ul>
+                 <li><a href="About.html">About Me</a></li>
+                  <li><a href="Contact.html">Contact</a></li>
+                  
+              </ul>
+              <ul>
+                  <li><a href="faq.html"  target="_blank">FAQs</a></li>
+                  <li><a href="services.html">Services</a></li>
+              </ul>
+          
+          </div>
+          <div class="footer-logo">
+              <img src="Logo.png" alt="Logo">
+          </div>
+      </div>
+      <div class="footer-info">
+          <p>&copy; 2024 Muhammad Saim Sajid. All rights reserved.</p>
+          <p>Want to explore the world of Django? Dive into my WorkSpace to see the magic of code come to life. Whether you're here for web development insights or just to connect, you're in the right place!</p>
+          <p>Powered by Django, crafted with care. This WorkSpace is a reflection of my passion for clean, efficient, and innovative web solutions. Let's build something amazing together.</p> 
+
+
+          <div class="social-links">
+              <a href="https://www.linkedin.com/in/muhammad-saim-sajid-744078266/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s" alt="Icon 1" />
+                Linkedin
+              </a>
+              <a href="https://github.com/saimsajidirl">
+                <img src="https://preview.redd.it/a-proposal-for-a-new-r-github-logo-v0-wl8v8rmmir7d1.png?width=640&crop=smart&auto=webp&s=ea11573147dad91bb1e76a1ffae622bde4769c5c" alt="Icon 2" />
+                Github
+              </a>
+      
+          </div>
+
+      </div>
+  </footer>
+
+
+    
 </body>
+
 </html>
+
