@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="Logo.png" type="image/png">
+
+<style>
+    /* Contact Section */
+    #contact {
+    background: var(--surface-color);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #6200ea; /* Change to white */
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; /* Space between links */
+}
+
+.contact-link {
+    text-decoration: none;
+    color: white; /* Change link text to white */
+    font-weight: 600;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px; /* Rounded corners */
+    width: 300px; /* Fixed width for consistent alignment */
+}
+
+.contact-link:hover {
+    color: var(--primary-color); /* Keep hover color for links */
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+}
+
+.contact-link i {
+    margin-right: 0.5rem; /* Space between icon and text */
+    color: white; /* Change icon color to white */
+    font-size: 1.2rem; /* Icon size */
+}
+
+.contact-link:last-child {
+    display: inline-block; /* Ensure email link behaves like a button */
+    color: white; /* Ensure the last link is also white */
+}
+
+
+</style>
+
+    </head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+                <span>Muhammad Saim</span>
+            </div>            <nav>
+                <ul>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="About.html" class="nav-link">About</a>
+                    <a href="Contact.html" class="nav-link">Contact</a>
+                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="websites.html" class="nav-link">My Websites</a>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+
+        <section id="contact"">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+               
+                <a href="https://www.linkedin.com/in/muhammad-saim-sajid-744078266/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/saimsajidirl" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.youtube.com/@MuhammadSaimDev" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a href="https://x.com/MuhammadSaimDev" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                
+                <a href="" class="contact-link">
+                </i>My Email:<br>saimsajidirl@gmail.com
+                </a>
+            </div>
+        </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <ul>
+                <li><a href="About.html">About Me</a></li>
+                <li><a href="Contact.html">Contact Me</a></li>
+
+            </ul>
+            <ul>
+                <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
+                <li><a href="researchpaper.html">Research Paper</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-logo">
+            <img src="Logo.png" alt="Logo">
+        </div>
+    </div>
+    <div class="footer-info">
+        <p>&copy; 2024 Muhammad Saim Sajid. All rights reserved.</p>
+        <p>Want to explore the world of Django? Dive into my WorkSpace to see the magic of code come to life.
+            Whether you're here for web development insights or just to connect, you're in the right place!</p>
+        <p>Powered by Django, crafted with care. This WorkSpace is a reflection of my passion for clean, efficient,
+            and innovative web solutions. Let's build something amazing together.</p>
+
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/muhammad-saim-sajid-744078266/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s"
+                    alt="Icon 1" />
+                Linkedin
+            </a>
+            <a href="https://github.com/saimsajidirl">
+                <img src="https://preview.redd.it/a-proposal-for-a-new-r-github-logo-v0-wl8v8rmmir7d1.png?width=640&crop=smart&auto=webp&s=ea11573147dad91bb1e76a1ffae622bde4769c5c"
+                    alt="Icon 2" />
+                Github
+            </a>
+
+        </div>
+
+    </div>
+</footer>
+</body>
+
+</html>

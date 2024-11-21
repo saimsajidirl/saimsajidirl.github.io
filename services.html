@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="Logo.png" type="image/png">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+/* Services Section Styles - Revised */
+#services {
+    background: var(--background-color);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(98, 0, 234, 0.1) 0%, rgba(3, 218, 198, 0.1) 100%);
+    z-index: 1;
+}
+
+#services h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+#services h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.service {
+    background: var(--surface-color);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.service:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service h3 {
+    color: var(--on-surface-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.service p {
+    color: var(--on-background-color);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.service-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--primary-color);
+    color: var(--on-surface-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.service:hover .service-icon {
+    transform: rotate(360deg);
+}
+
+.learn-more {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.learn-more a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.learn-more a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-image {
+        height: 150px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+    <div class="container">
+        <div class="logo">
+            <img src="Logo.png" alt="Logo">
+            <span>Muhammad Saim</span>
+        </div>            <nav>
+            <ul>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="About.html" class="nav-link">About</a>
+                <a href="Contact.html" class="nav-link">Contact</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="websites.html" class="nav-link">My Websites</a>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<section id="services">
+    <h2>Services We Offer</h2>
+    <div class="services-grid">
+        <div class="service">
+            <div class="service-image">
+                <img src="https://s3-alpha.figma.com/hub/file/5123373202/3b9ef354-1859-418e-b6bb-a03ab8bda8da-cover.png" alt="E-commerce Websites" />
+                <div class="service-icon">🛒</div>
+            </div>
+            <div class="service-content">
+                <h3>E-commerce Websites</h3>
+                <p>
+                    Launch your online store with our fully customizable e-commerce solutions. We focus on seamless shopping experiences, secure payment gateways, 
+                    and inventory management to help you thrive in the digital marketplace.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://phoenixnap.com/glossary/wp-content/uploads/2024/03/what-is-a-website-database.jpg" alt="Database-Based Websites" />
+                <div class="service-icon">💾</div>
+            </div>
+            <div class="service-content">
+                <h3>Database-Based Websites</h3>
+                <p>
+                    Our expertise in database-driven development allows us to create robust and scalable websites tailored to your specific needs. 
+                    We utilize advanced database management systems to ensure efficient data handling and optimal performance.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://user-images.githubusercontent.com/53991079/236999190-37531693-22dd-4da4-b9ef-c589829b01e7.png" alt="LLM Websites" />
+                <div class="service-icon">🤖</div>
+            </div>
+            <div class="service-content">
+                <h3>LLM Websites</h3>
+                <p>
+                    Embrace the future of web interaction with our LLM (Large Language Model) website solutions. We build innovative websites that leverage 
+                    advanced AI technologies to enhance user interaction and automate content generation.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://cdn.lynda.com/course/2425559/2425559-1638983922318-16x9.jpg" alt="Informational Websites" />
+                <div class="service-icon">ℹ️</div>
+            </div>
+            <div class="service-content">
+                <h3>Informational Websites</h3>
+                <p>
+                    We design user-friendly interfaces and incorporate compelling content to help your audience understand your brand, products, or services. 
+                    Our informational websites serve as effective communication tools that resonate with visitors.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://agentestudio.com/uploads/ckeditor/pictures/1687/blog-design-19.png" alt="Blogs" />
+                <div class="service-icon">📝</div>
+            </div>
+            <div class="service-content">
+                <h3>Blog Websites</h3>
+                <p>
+                    Share your thoughts and expertise with a professionally designed blog. We offer comprehensive services to set up and customize your blog, 
+                    ensuring it reflects your unique style and brand identity.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://i.ytimg.com/vi/1Prw90PRiJE/maxresdefault.jpg" alt="Personal Websites" />
+                <div class="service-icon">👤</div>
+            </div>
+            <div class="service-content">
+                <h3>Personal Websites</h3>
+                <p>
+                    Create a unique online presence with a personal website. Whether for a portfolio or a blog, we design sites that showcase your personality 
+                    and achievements.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/65c183700d8fbc2492a6c314_6531361ccf5757c2e991e9fb_6pWiS1br6sImopelr9oFycse8XLyhAhsekWbiO9joSDCA1C1A8WdoqGUwSQ27hdFGHSQLYcPNW6LbG0Mj-y0shVQpObaToGnAWatUFwUItJYcEGgpcPj4A-RMiEubBUsOMT5qMlTw5n2wnsvvbA9pHo.png" alt="Business Websites" />
+                <div class="service-icon">🏢</div>
+            </div>
+            <div class="service-content">
+                <h3>Business Websites</h3>
+                <p>
+                    Establish your brand online with our professional business website services. We help you communicate your value proposition effectively and attract 
+                    potential customers.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://doublethedonation.com/wp-content/uploads/2022/06/I-Had-Cancer-Nonprofit-Websites-1.jpg" alt="Non-Profit Websites" />
+                <div class="service-icon">❤️</div>
+            </div>
+            <div class="service-content">
+                <h3>Non-Profit Websites</h3>
+                <p>
+                    Support your mission with a dedicated non-profit website. We create engaging sites that promote your cause, facilitate donations, and connect with 
+                    your community.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://themefisher.com/blog/edubin.webp" alt="Education Websites" />
+                <div class="service-icon">🎓</div>
+            </div>
+            <div class="service-content">
+                <h3>Education Websites</h3>
+                <p>
+                    Enhance learning experiences with our education website solutions. We design platforms that facilitate online courses, resources, and community 
+                    engagement for educators and students alike.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://cdn.dribbble.com/userupload/2738964/file/original-82bfa47844418012c7ad4e7673959bed.jpg?resize=400x0" alt="Social Media Websites" />
+                <div class="service-icon">📱</div>
+            </div>
+            <div class="service-content">
+                <h3>Social Media Websites</h3>
+                <p>
+                    Connect people with our social media website development services. We create platforms that foster interaction, sharing, and community building, 
+                    tailored to your specific audience.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2018/07/simple-machine-forums-homepage.webp" alt="Forums" />
+                <div class="service-icon">💬</div>
+            </div>
+            <div class="service-content">
+                <h3>Forums</h3>
+                <p>
+                    Build a community around your interests with our forum development services. We create spaces for discussion, support, and information sharing, 
+                    fostering engagement among users.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://themewagon.com/wp-content/uploads/2020/12/news.jpg" alt="News Websites" />
+                <div class="service-icon">📰</div>
+            </div>
+            <div class="service-content">
+                <h3>News Websites</h3>
+                <p>
+                    Keep your audience informed with a professional news website. We design platforms that prioritize content delivery, user engagement, and ease of 
+                    navigation, making news accessible to everyone.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://venngage-wordpress.s3.amazonaws.com/uploads/2018/04/Landing-Page-Examples.png" alt="Landing Pages" />
+                <div class="service-icon">📈</div>
+            </div>
+            <div class="service-content">
+                <h3>Landing Pages</h3>
+                <p>
+                    Optimize your marketing efforts with our expertly designed landing pages. We create targeted pages that drive conversions and enhance user 
+                    experience, tailored to your campaigns.
+                </p>
+            </div>
+        </div>
+
+        <div class="service">
+            <div class="service-image">
+                <img src="https://mikekhorev.com/wp-content/uploads/2021/09/consultio-business-wordpress-theme-768x576-1.jpg" alt="Company Websites" />
+                <div class="service-icon">🏢</div>
+            </div>
+            <div class="service-content">
+                <h3>Startup Websites</h3>
+                <p>
+                    Enhance your corporate image with a professionally designed company website. We create sites that effectively communicate your brand values and 
+                    showcase your products or services, helping you stand out in the marketplace.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <ul>
+                <li><a href="About.html">About Me</a></li>
+                <li><a href="Contact.html">Contact Me</a></li>
+
+            </ul>
+            <ul>
+                <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
+                <li><a href="researchpaper.html">Research Paper</a></li>
+            </ul>
+
+        </div>
+        <div class="footer-logo">
+            <img src="Logo.png" alt="Logo">
+        </div>
+    </div>
+    <div class="footer-info">
+        <p>&copy; 2024 Muhammad Saim Sajid. All rights reserved.</p>
+        <p>Want to explore the world of Django? Dive into my WorkSpace to see the magic of code come to life.
+            Whether you're here for web development insights or just to connect, you're in the right place!</p>
+        <p>Powered by Django, crafted with care. This WorkSpace is a reflection of my passion for clean, efficient,
+            and innovative web solutions. Let's build something amazing together.</p>
+
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/muhammad-saim-sajid-744078266/">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRokEYt0yyh6uNDKL8uksVLlhZ35laKNQgZ9g&s"
+                    alt="Icon 1" />
+                Linkedin
+            </a>
+            <a href="https://github.com/saimsajidirl">
+                <img src="https://preview.redd.it/a-proposal-for-a-new-r-github-logo-v0-wl8v8rmmir7d1.png?width=640&crop=smart&auto=webp&s=ea11573147dad91bb1e76a1ffae622bde4769c5c"
+                    alt="Icon 2" />
+                Github
+            </a>
+
+        </div>
+
+    </div>
+</footer>
+
+</body>
+</html>
