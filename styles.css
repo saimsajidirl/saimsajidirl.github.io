@@ -365,6 +365,7 @@ nav ul li a:hover::after {
 }
 
 
+
 .skills {
     background: var(--background-color);
     padding: 5rem 0;
@@ -392,8 +393,11 @@ nav ul li a:hover::after {
 .skill-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    padding: 0 2rem;
+    gap: 12px;
+    padding: 10px;
+    justify-items: center;
+    justify-content: center; /* Center the grid itself */
+    margin: 0 auto; /* Center the grid horizontally in its container */
 }
 
 .skill-card {
@@ -443,6 +447,12 @@ nav ul li a:hover::after {
 
 .skill-card:hover .hover-text {
     opacity: 1;
+}
+
+.skill-pair {
+    display: flex;
+    gap: 10px; /* Space between the two cards */
+    justify-content: center; /* Align the pair horizontally */
 }
 
 .tutorials {
