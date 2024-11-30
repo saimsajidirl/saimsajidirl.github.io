@@ -365,15 +365,15 @@ nav ul li a:hover::after {
 }
 
 
-
 .skills {
     background: var(--background-color);
-    padding: 5rem 0;
+    padding: 2rem 0; /* Reduced vertical padding */
+    margin-bottom: 1rem; /* Optional: Add bottom margin to separate sections */
 }
 
 .skills h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem; /* Reduced bottom margin for the heading */
     color: var(--accent-color);
     font-size: 2.5rem;
     position: relative;
@@ -905,4 +905,34 @@ nav ul li a:hover::after {
     .footer-logo img {
         width: 120px; /* Adjust for smaller screens */
     }
+}
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--surface-color); /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color); /* Color of the thumb on hover */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* Makes scrollbar thinner */
+    scrollbar-color: var(--primary-color) var(--surface-color); /* Thumb color and track color */
+}
+
+/* For Edge and Internet Explorer */
+.scrollable-element {
+    -ms-overflow-style: scrollbar; /* Use the scrollbar style */
 }
