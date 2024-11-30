@@ -936,3 +936,11 @@ nav ul li a:hover::after {
 .scrollable-element {
     -ms-overflow-style: scrollbar; /* Use the scrollbar style */
 }
+
+
+@supports not (selector(::-webkit-scrollbar)) {
+    * {
+        scrollbar-width: thin; /* Makes scrollbar thinner */
+        scrollbar-color: var(--primary-color) var(--surface-color); /* Thumb color and track color */
+    }
+}
