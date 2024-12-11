@@ -11,10 +11,68 @@
     <link rel="stylesheet" href="styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+
+.section-about {
+    background: var(--surface-color);
+    padding: 5rem 0;
+    color: white;
+}
+
+.profile, .projects, .skills, .education, .soft-skills, .workstyle-framework {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: white;
+
+h2 {
+    color: var(--accent-color); 
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    color: white; 
+}
+
+ul li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: white; 
+}
+
+strong {
+    color: white;
+}
+
+.profile p {
+    margin-bottom: 1rem;
+    color: white; 
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .section-about {
+        padding: 3rem 1rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .profile, .projects, .skills, .education, .soft-skills, .workstyle-framework {
+        padding: 1rem;
+        color: white; 
+    }
+}
+
+    </style>
 </head>
 
 <body>
-
     <header>
         <div class="container">
             <div class="logo">
@@ -23,11 +81,12 @@
             </div>            
             <nav>
                 <ul>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="About.html" class="nav-link">About</a></li>
-                    <li><a href="Contact.html" class="nav-link">Contact</a></li>
-                    <li><a href="services.html" class="nav-link">Services We Offer</a></li>
-                    <li><a href="websites.html" class="nav-link">My Websites</a></li>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="About.html" class="nav-link">About</a>
+                    <a href="Contact.html" class="nav-link">Contact</a>
+                    <a href="services.html" class="nav-link">Services We Offer</a>
+                    <a href="websites.html" class="nav-link">My Websites</a>
+                    
                 </ul>
             </nav>
         </div>
