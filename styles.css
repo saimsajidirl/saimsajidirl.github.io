@@ -149,27 +149,39 @@ nav ul li a:hover::after {
     width: 100%;
 }
 .btn {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); /* Gradient button */
     color: var(--on-surface-color);
-    padding: 0.7rem 1.5rem;
-    border-radius: 30px;
+    padding: 0.8rem 2rem;
+    border-radius: 50px; /* Slightly more rounded corners for a modern look */
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     border: none;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700; /* Slightly bolder text for emphasis */
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: inline-block; /* Ensure the button takes up only as much space as needed */
-    position: relative; /* Helps with z-index positioning */
-    z-index: 1; /* Brings button above other elements */
+    letter-spacing: 1.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem; /* Clear readable font size */
+    background-color: var(--primary-color);
+    outline: none; /* Remove outline when clicked */
+    border-radius: 50px;
 }
 
 .btn:hover {
-    background: var(--secondary-color);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(1px); /* Creates a subtle 'pressed' effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slightly smaller shadow when active */
+}
+
+.btn:focus {
+    outline: 3px solid var(--secondary-color); /* Visual focus indication */
 }
 
 
@@ -259,115 +271,129 @@ nav ul li a:hover::after {
         transform: translateY(0);
     }
 }
-
-
+/* General Styling for Projects Section */
 .projects {
-    padding: 5rem 0;
-    background: var(--surface-color);
+    padding: 6rem 1rem; /* Add a bit more breathing room */
+    background: var(--surface-color); /* Revert to old background */
+    clip-path: none; /* Remove dynamic shape */
 }
 
 .projects h2 {
     text-align: center;
     margin-bottom: 3rem;
     color: var(--accent-color);
-    font-size: 2.5rem;
+    font-size: 2.8rem; /* Slightly larger font size */
+    font-weight: 700; /* Bold heading for emphasis */
+    letter-spacing: 2px; /* Add some spacing */
     position: relative;
 }
 
 .projects h2::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -15px; /* More spacing for better readability */
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
-    background: var(--secondary-color);
+    width: 60px; /* Increased width */
+    height: 4px; /* Slightly thicker line */
+    background: var(--primary-color);
+    border-radius: 10px; /* Rounded edges */
 }
 
+/* Grid Layout */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 2.5rem; /* Slightly larger gap */
+    padding: 0 1rem;
 }
 
+/* Project Card Styling */
 .project-card {
     background: var(--surface-color);
-    border-radius: 15px;
+    border-radius: 20px; /* Softer edges */
     overflow: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    display: flex; /* Use flexbox for consistent alignment */
-    flex-direction: column; /* Align items vertically */
-    justify-content: space-between; /* Space out content */
-    height: 400px; /* Fixed height for the card */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* For layered effects */
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-12px) scale(1.03); /* Add subtle scaling */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .project-card img {
-    width: 100%; /* Ensures the image fills the card width */
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    object-position: center; /* Centers the image within the specified area */
-    transition: all 0.3s ease;
+    width: 100%;
+    height: 200px; /* Adjusted image height */
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 3px solid var(--secondary-color); /* Add a decorative border */
+    transition: transform 0.4s ease;
+    flex-shrink: 0; /* Prevents image from shrinking */
 }
 
-
 .project-card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Removed rotation */
 }
 
 .project-content {
-    padding: 1.5rem;
-    text-align: center; /* Center the text */
-    min-height: 100px; /* Ensures consistent height for text section */
+    padding: 2rem; /* Add more padding for better spacing */
+    text-align: center; /* Ensure centered text */
+    flex-grow: 1; /* Ensures content takes available space */
 }
 
 .project-card h3 {
     color: var(--on-surface-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: 600;
     text-align: center; /* Center the heading */
 }
 
 .project-card p {
     color: var(--on-background-color);
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+    font-size: 1rem; /* Standardize font size */
+    margin-bottom: 1.5rem; /* Add more spacing */
+    line-height: 1.6; /* Better readability */
+    text-align: center; /* Center the text */
 }
 
 .button {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); /* Gradient button */
     color: var(--on-surface-color);
-    padding: 0.5rem 1rem; /* Smaller padding */
+    padding: 0.7rem 1.5rem; /* More generous padding */
     border-radius: 30px;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: inline-block; /* Ensures it behaves like a button */
-    margin: 0 auto; /* Center the button */
+    letter-spacing: 1.2px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto; /* Add margin for alignment */
+    align-self: flex-end; /* Push the button to the end */
 }
 
 .button:hover {
-    background: var(--secondary-color);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px) scale(1.05);
 }
 
 .button:focus {
-    outline: 2px dashed var(--accent-color); /* Focus outline for accessibility */
-    outline-offset: 2px;
+    outline: 3px dashed var(--accent-color);
+    outline-offset: 4px;
 }
 
-
+/* Subtle Animations */
+.project-card:hover .project-content {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
 
 
 
@@ -1150,3 +1176,4 @@ nav ul li a:hover::after {
         scrollbar-color: var(--primary-color) var(--surface-color); /* Thumb color and track color */
     }
 }
+

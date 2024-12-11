@@ -10,65 +10,120 @@
     <link rel="icon" href="Logo.png" type="image/png">
 
 <style>
-    /* Contact Section */
-    #contact {
+  /* General Styles */
+#contact {
+    margin-top: 40px;
     background: var(--surface-color);
-    padding: 5rem 0;
+    padding: 4rem 0; /* Reduced padding */
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
 }
 
+/* Title */
 #contact h2 {
-    color: #6200ea; /* Change to white */
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.5rem; /* Smaller title */
+    color: #6200ea;
+    font-weight: 700;
+    margin-bottom: 3rem; /* Reduced margin */
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Reduced letter-spacing */
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #contact h2::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -10px; /* Reduced position */
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 3px;
+    width: 50px; /* Smaller underline */
+    height: 3px; /* Smaller underline */
     background: var(--secondary-color);
+    border-radius: 5px;
 }
 
+/* Contact Info Layout */
 .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem; /* Space between links */
+    gap: 1.5rem; /* Reduced gap */
+    padding: 1.5rem 0; /* Reduced padding */
+    transition: all 0.3s ease;
 }
 
+.contact-info:hover {
+    transform: translateY(-4px); /* Slightly reduced hover effect */
+}
+
+/* Links */
 .contact-link {
     text-decoration: none;
-    color: white; /* Change link text to white */
+    color: white;
     font-weight: 600;
+    font-size: 1rem; /* Smaller font-size */
     position: relative;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px; /* Rounded corners */
-    width: 300px; /* Fixed width for consistent alignment */
+    padding: 0.8rem 1.5rem; /* Reduced padding */
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 25px; /* Reduced border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    width: 300px; /* Smaller width */
+    text-align: center;
 }
-
 .contact-link:hover {
-    color: var(--primary-color); /* Keep hover color for links */
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+    color: #9c27b0;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-4px); /* Reduced hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: popIn 0.3s ease forwards;
 }
 
 .contact-link i {
-    margin-right: 0.5rem; /* Space between icon and text */
-    color: white; /* Change icon color to white */
-    font-size: 1.2rem; /* Icon size */
+    margin-right: 0.8rem; /* Reduced space for icon */
+    color: inherit;
+    font-size: 1.2rem; /* Smaller icon size */
 }
 
 .contact-link:last-child {
-    display: inline-block; /* Ensure email link behaves like a button */
-    color: white; /* Ensure the last link is also white */
+    display: inline-block;
+    background: linear-gradient(45deg, #6200ea, #03a9f4);
+    color: white;
+    border-radius: 45px; /* Slightly smaller border-radius */
+    font-size: 1.1rem; /* Smaller font-size */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    width: auto;
+    padding: 0.7rem 2rem; /* Reduced padding */
+}
+
+/* Hover Animation for Contact Links */
+@keyframes popIn {
+    0% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem; /* Smaller title for mobile */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 1rem; /* Reduced gap for mobile */
+    }
+
+    .contact-link {
+        width: 100%;
+        max-width: 300px; /* Smaller max-width for mobile */
+    }
 }
 
 
@@ -90,12 +145,13 @@
                     <a href="About.html" class="nav-link">About</a>
                     <a href="Contact.html" class="nav-link">Contact</a>
                     <a href="services.html" class="nav-link">Services We Offer</a>
-                    <a href="websites.html" class="nav-link">My Websites</a>
+                    <a href="technology.html" class="nav-link">Technologies</a>
                     
                 </ul>
             </nav>
         </div>
     </header>
+
 
     <main>
 
@@ -133,7 +189,7 @@
 
             </ul>
             <ul>
-                <li><a href="technology.html">Technologies</a></li>
+                <li><a href="websites.html">My Websites</a></li>
                 <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
                 <li><a href="researchpaper.html">Research Paper</a></li>
             </ul>
@@ -167,6 +223,7 @@
 
     </div>
 </footer>
+
 
 
 </body>
