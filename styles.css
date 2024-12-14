@@ -397,13 +397,13 @@ nav ul li a:hover::after {
 
 
 
-.skills {
+.interest {
     background: var(--background-color);
     padding:  20px; /* Increased vertical padding */
     text-align: center; /* Center text in the section */
 }
 
-.skills h2 {
+.interest h2 {
     color: var(--accent-color);
     font-size: 3rem; /* Increased font size */
     margin-bottom: 2rem;
@@ -413,7 +413,7 @@ nav ul li a:hover::after {
     letter-spacing: 1px; /* Spacing between letters */
 }
 
-.skills h2::after {
+.interest h2::after {
     content: '';
     position: absolute;
     bottom: -15px; /* Adjusted position */
@@ -1035,9 +1035,9 @@ nav ul li a:hover::after {
 }
 
 .footer-logo img {
-    width: 160px;
-    height: auto;
-    border-radius: 50%;
+    width: 160px; /* Fixed width */
+    height: 160px; /* Fixed height to make it circular */
+    border-radius: 50%; /* Make the image circular */
     border: 6px solid var(--surface-color);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1059,38 +1059,38 @@ nav ul li a:hover::after {
 .footer-info p {
     margin-bottom: 1rem;
 }
-
-/* Social Media Links */
 .social-links {
     display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 2rem;
+    gap: 20px; /* Space between icons */
+    align-items: center;
+    justify-content: center; /* Centers the icons horizontally */
+    margin-top: 20px; /* Optional, adds spacing at the top */
 }
 
 .social-links a {
+    text-decoration: none;
+    color: inherit; /* Ensures text color is inherited */
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: var(--on-background-color);
-    font-size: 1.3rem;
-    transition: color 0.3s ease, transform 0.3s ease;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
 }
 
-.social-links a img {
-    width: 30px;
-    height: 30px;
-    margin-right: 0.5rem;
-    transition: transform 0.3s ease;
-}
-
-.social-links a:hover {
-    color: var(--primary-color);
-    transform: translateY(-2px); /* Hover effect lift */
+.social-links img {
+    width: 50px; /* Fixed size for the icons */
+    height: 50px; /* Fixed size for the icons */
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Ensures the image scales correctly within the circle */
+    margin-right: 10px; /* Space between image and text */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
 }
 
 .social-links a:hover img {
-    transform: scale(1.15); /* Slight zoom effect for icons */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.social-links a:hover {
+    color: #0077b5; /* Change text color on hover */
 }
 
 /* Responsive Design */
@@ -1114,9 +1114,7 @@ nav ul li a:hover::after {
         width: 140px;
     }
 
-    .social-links {
-        gap: 1rem;
-    }
+
 }
 
 @media (max-width: 768px) {
