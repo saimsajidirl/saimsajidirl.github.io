@@ -7,68 +7,65 @@
     <title>About Me</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="images/Logo.png" type="image/x-icon">
-
     <link rel="stylesheet" href="styles.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        .section-about {
+            background: var(--surface-color);
+            padding: 5rem 0;
+            color: white;
+        }
 
-.section-about {
-    background: var(--surface-color);
-    padding: 5rem 0;
-    color: white;
-}
+        .profile, .projects, .skills, .education, .soft-skills, .workstyle-framework {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
 
-.profile, .projects, .skills, .education, .soft-skills, .workstyle-framework {
-    margin-bottom: 3rem;
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    color: white;
+        h2 {
+            color: var(--accent-color);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
 
-h2 {
-    color: var(--accent-color); 
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
+        ul {
+            list-style: none;
+            padding-left: 0;
+            color: white;
+        }
 
-ul {
-    list-style: none;
-    padding-left: 0;
-    color: white; 
-}
+        ul li {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: white;
+        }
 
-ul li {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    color: white; 
-}
+        strong {
+            color: white;
+        }
 
-strong {
-    color: white;
-}
+        .profile p {
+            margin-bottom: 1rem;
+            color: white;
+        }
 
-.profile p {
-    margin-bottom: 1rem;
-    color: white; 
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .section-about {
+                padding: 3rem 1rem;
+            }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .section-about {
-        padding: 3rem 1rem;
-    }
+            h2 {
+                font-size: 1.8rem;
+            }
 
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .profile, .projects, .skills, .education, .soft-skills, .workstyle-framework {
-        padding: 1rem;
-        color: white; 
-    }
-}
-
+            .profile, .projects, .skills, .education, .soft-skills, .workstyle-framework {
+                padding: 1rem;
+                color: white;
+            }
+        }
     </style>
 </head>
 
@@ -76,68 +73,56 @@ strong {
     <header>
         <div class="container">
             <div class="logo">
-                <img src="Logo.png" alt="Logo">
+                <img src="images/Logo.png" alt="Logo">
                 <span>Muhammad Saim</span>
-            </div>            
+            </div>
             <nav>
                 <ul>
-                    <a href="index.html" class="nav-link">Home</a>
-                    <a href="About.html" class="nav-link">About</a>
-                    <a href="Contact.html" class="nav-link">Contact</a>
-
-                    
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="About.html" class="nav-link">About</a></li>
+                    <li><a href="Contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-
     <main>
         <div class="curved-container">
-          <section id="about" class="section-about">
-            <div class="container">
-              
+            <section id="about" class="section-about">
+                <div class="container">
+                    <div class="skills">
+                        <h2>Summary</h2>
+                        <p><strong>Software Engineer From Pakistan</strong></p>
+                        <p>
+                            Muhammad Saim Sajid is a Software Engineer based in Bahawalpur and a student at the Islamia University of Bahawalpur. He is a highly talented individual with diverse skills, including coding, beatboxing, dancing, writing, and much more. Known for his excellent communication skills, he has engaged in conversations with prominent CEOs and has experience in public speaking. A true technology enthusiast, he is passionate about computers and enjoys listening to music in his free time.
+                        </p>
+                    </div>
 
-              <div class="skills">
-                <h2>Summary</h2>
-                <p><strong>Software Engineer From Pakistan</strong></p>
-                <p>
-                    Muhammad Saim Sajid is a skilled Full-Stack Python Developer and Machine Learning Enthusiast.He is proficient in Python, Django, FastAPI, and cloud services like AWS. With a strong foundation in database management (MongoDB, PostgreSQL, MySQL) and tools such as Docker, Redis, and Git, he excels in robust back-end solutions. His machine learning expertise includes frameworks like HayStack,Langchain, Pandas, and Streamlit. Driven by problem-solving and continuous learning, Saim combines technical proficiency with a dedication to innovation.
-                </p>
-              </div>
-
-
-      
-               
-              <div class="skills">
-                <h2>Hobbies</h2><br>
-                <ul>
-                  <li><strong>Studying History:</strong>As a passionate history Lover with a specialization in ancient Egyptian history and archaeology, I delve into a wide range of historical periods, including the Renaissance, Roman, and Greek eras, as well as events from the 1500s and beyond.</li>
-                  <li><strong>Making Youtube Videos</strong>I maintain a YouTube channel where I share a variety of content, including project previews, tutorials, and informative videos that aim to benefit others.</li>
-                  <li><strong>PC Gaming</strong>With over a decade of gaming experience, I've enjoyed playing both PC and mobile games. Some of my favorites include Fortnite, WWE, Dragon Ball FighterZ, GTA 5, Hogwarts Legacy, and many others.</li>
-                  <li><strong>Making Edits</strong>As a video editor with a 10 years of experience, I enjoy creating video Edits. I maintain an Instagram account where I share my edits, including anime edits and edits from popular media like Harry Potter.</li>
-       
-                </ul>
-              </div>
-
-         
-          </section>
+                    <div class="skills">
+                        <h2>Hobbies</h2>
+                        <ul>
+                            <li><strong>Studying History:</strong> As a passionate history lover with a specialization in ancient Egyptian history and archaeology, I delve into a wide range of historical periods, including the Renaissance, Roman, and Greek eras, as well as events from the 1500s and beyond.</li>
+                            <li><strong>Making Youtube Videos:</strong> I maintain a YouTube channel where I share a variety of content, including project previews, tutorials, and informative videos that aim to benefit others.</li>
+                            <li><strong>PC Gaming:</strong> With over a decade of gaming experience, I've enjoyed playing both PC and mobile games. Some of my favorites include Fortnite, WWE, Dragon Ball FighterZ, GTA 5, Hogwarts Legacy, and many others.</li>
+                            <li><strong>Making Edits:</strong> As a video editor with 10 years of experience, I enjoy creating video edits. I maintain an Instagram account where I share my edits, including anime edits and edits from popular media like Harry Potter.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
         </div>
-      </main>
-      
-      <footer class="footer">
+    </main>
+
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-links">
                 <ul>
                     <li><a href="About.html">About Me</a></li>
                     <li><a href="Contact.html">Contact Me</a></li>
-
                 </ul>
                 <ul>
                     <li><a href="hobbies.html" target="_blank">Hobbies</a></li>
                     <li><a href="researchpaper.html">Research Paper</a></li>
                 </ul>
-
             </div>
             <div class="footer-logo">
                 <img src="images/Logo.png" alt="Logo">
@@ -145,9 +130,7 @@ strong {
         </div>
         <div class="footer-info">
             <p>&copy; 2024 Muhammad Saim Sajid. All rights reserved.</p>
-            <p>Want to explore the world of Saim? Dive into my Wwebsite to see the magic of talent come to life.
-                Whether you're here for Information or just to connect, you're in the right place!</p>
-
+            <p>Want to explore the world of Saim? Dive into my website to see the magic of talent come to life. Whether you're here for information or just to connect, you're in the right place!</p>
 
             <div class="social-links">
                 <a href="https://www.pinterest.com/honouredbyheaven/">
@@ -160,15 +143,9 @@ strong {
                         alt="Instagram" />
                     Instagram
                 </a>
-
             </div>
-
         </div>
     </footer>
-
-
-    
 </body>
 
 </html>
-
